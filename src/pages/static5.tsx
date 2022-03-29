@@ -5,14 +5,13 @@ interface Props {
 }
 
 export async function getStaticProps() {
-  let num;
+  let num = 0;
   try {
     const response = await fetch('http://localhost:3000/api/random');
     const json = await response.json();
     num = json.num;
   } catch (err) {
     console.error(err);
-    num = 0;
   }
 
   return {
