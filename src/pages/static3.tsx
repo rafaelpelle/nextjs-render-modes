@@ -19,8 +19,11 @@ export default function Static3() {
 
   return (
     <div className={styles.container}>
-      <h1>This content is static</h1>
-      <p>It will be rendered during the project build</p>
+      <h1>This content is static, with dynamic hydration</h1>
+      <p>
+        It will be rendered during the project build (with a default value), and
+        hydrated on client-side
+      </p>
       <p>{num}</p>
     </div>
   );
